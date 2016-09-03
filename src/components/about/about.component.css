@@ -1,0 +1,9 @@
+:host {
+	margin: 6px;
+	display: block;
+}
+.profile {
+	width: 132px;
+	height: 132px;
+	float: right;
+}

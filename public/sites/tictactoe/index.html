@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" type="text/css" href="tictac.css" />
+		<link rel="stylesheet" type="text/css" href="semantic.min.css">
+	</head>
+	
+	<body id="home">
+	
+		<div class="ui menu">
+			<div class="ui container">
+				<div class="header item borderless">
+					<h1 class="ui header">Tic Tac Toe</h1>
+				</div>
+			</div>
+		</div>
+	
+
+		
+		<div class="ui main text container">
+			<div class="ui raised segment">
+				<h3>Introduction</h3>
+				<p>
+					Welcome to Neural-Network Tic Tac Toe. This neural network's training set is created using a tic-tac-toe minimax algorithm and a randomly moving player. This project was created by Brian Hoy for the 2016 MTHS Science Fair. You can either run the automated test, which will do 6 trials and print the results to the console (may take some time), or train a neural network and play against it.
+				</p>
+				<p> 
+					This project uses the <a href="https://github.com/harthur/brain">Brain</a> library by Heather Arthur and a <a href="http://richard.to/programming/ai-for-owari-part-2.html"> minimax tic tac toe algorithm </a> by Richard To.
+				</p>
+				<button style="margin-top: 5px;" class="ui button" type="button" onclick="StartNeuralNetwork()">Begin automated test (results print to console)</button>
+			</div>
+			
+			<div width="700px" class="ui raised segment">
+				<h3>Controls</h3>
+				<div>
+					<div class="field">
+						<label>Number of Games to Train</label>
+						<input id="trainingGames" style="float: right;" placeholder="100"> 
+					</div>
+					<div class="field" style="margin-top: 5px; margin-bottom: 5px;">
+						<label>Maximum iterations for each game</label>
+						<input id="maxIterations" style="float: right;" placeholder="500"> 
+					</div>
+		
+				</div>
+
+				<button class="ui button" type="button" onclick="TrainAndPlay()">Train & Play</button>
+			</div>
+
+			<div class="ui raised segment">
+
+				<h3>Board</h3>
+				<div id="status" class="ui info message">
+					
+				</div>
+				<div>
+					<button class="ui button" type="button" onclick="ResetBoard()">Reset</button>
+				</div>
+				
+				<div style="margin-top: 10px;">
+					<table>
+						<tr>
+							<td id="t0" onclick="userMadeMove(0)"></td>
+							<td id="t1" onclick="userMadeMove(1)"></td> 
+							<td id="t2" onclick="userMadeMove(2)"></td>
+						</tr>
+						<tr>
+							<td id="t3" onclick="userMadeMove(3)"></td>
+							<td id="t4" onclick="userMadeMove(4)"></td> 
+							<td id="t5" onclick="userMadeMove(5)"></td>
+						</tr>
+						<tr>
+							<td id="t6" onclick="userMadeMove(6)"></td>
+							<td id="t7" onclick="userMadeMove(7)"></td> 
+							<td id="t8" onclick="userMadeMove(8)"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		
+		<script src="brain-0.6.3.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script src="tictac.js"></script>
+	</body>
+</html>
+</html>

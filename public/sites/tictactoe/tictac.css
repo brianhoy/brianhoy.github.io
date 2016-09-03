@@ -1,0 +1,27 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: sans-serif;
+}
+
+td {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 50px;
+}
+
+#status
+{
+	display: none;
+}
+
+td:hover {
+	background-color: lightgray;
+}
+
+p1 {
+	width: 100%;
+}
