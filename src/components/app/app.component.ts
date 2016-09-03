@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, enableProdMode } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Router, NavigationStart  } from '@angular/router'
 import {NgStyle} from '@angular/common';
@@ -17,6 +17,7 @@ export class AppComponent {
 
 	constructor(private router: Router) {
 		this.navigating = false;
+		enableProdMode();
 		this.router.events.subscribe((event) => {
 			if(event instanceof NavigationStart) {
 				//this.flipAnimation();
