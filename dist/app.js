@@ -36,6 +36,7 @@ webpackJsonp([0],{
 	var about_component_1 = __webpack_require__(438);
 	var work_component_1 = __webpack_require__(440);
 	var contact_component_1 = __webpack_require__(445);
+	core_1.enableProdMode();
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -3728,7 +3729,6 @@ webpackJsonp([0],{
 	    function AppComponent(router) {
 	        this.router = router;
 	        this.navigating = false;
-	        core_1.enableProdMode();
 	        this.router.events.subscribe(function (event) {
 	            if (event instanceof router_1.NavigationStart) {
 	            }
